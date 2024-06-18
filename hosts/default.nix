@@ -18,9 +18,6 @@ let
     inherit system;
     config = {
       allowUnfree = true;
-      permittedInsecurePackages = [
-          "yandex-browser-stable"
-      ];
     };
   };
 
