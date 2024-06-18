@@ -88,8 +88,8 @@ in
         xserver = {
           enable = true;
           xkb = {
-            layout = "us";
-            options = "eurosign:e";
+            layout = "us,ru";
+            xkbOptions = "grp:win_space_toggle";
           };
           autoRepeatInterval = 50;
           autoRepeatDelay = 200;
