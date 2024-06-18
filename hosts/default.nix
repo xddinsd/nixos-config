@@ -20,12 +20,16 @@ let
     inherit system;
     config = {
       allowUnfree = true;
+      permittedInsecurePackages = ["yandex-browser-stable"];
     };
   };
 
   stable = import nixpkgs-stable {
     inherit system;
-    config.allowUnfree = true;
+    config = {
+      allowUnfree = true;
+      permittedInsecurePackages = ["yandex-browser-stable"];
+    };
   };
 
   lib = nixpkgs.lib;
