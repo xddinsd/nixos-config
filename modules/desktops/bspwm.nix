@@ -89,7 +89,7 @@ in
           enable = true;
           xkb = {
             layout = "us,ru";
-            options = "grp:win_space_toggle";
+            options = "grp:alt_shift_toggle";
           };
           autoRepeatInterval = 50;
           autoRepeatDelay = 200;
