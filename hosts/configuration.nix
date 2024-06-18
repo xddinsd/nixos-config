@@ -57,6 +57,11 @@ in
     };
   };
 
+  services.xserver = {
+    layout = "us,ru";
+    xkbOptions = "grp:win_space_toggle";
+  };
+
   console = {
     font = "Lat2-Terminus16";
     keyMap = "us";
@@ -98,15 +103,13 @@ in
       cifs-utils # Samba
       coreutils # GNU Utilities
       git # Version Control
-      gvfs # Samba
       killall # Process Killer
       lshw # Hardware Config
       nano # Text Editor
-      nodePackages.pnpm # Package Manager
       nix-tree # Browse Nix Store
       pciutils # Manage PCI
-      ranger # File Manager
       smartmontools # Disk Health
+      gnome-disks
       tldr # Helper
       usbutils # Manage USB
       wget # Retriever
@@ -127,10 +130,12 @@ in
       # Apps
       appimage-run # Runs AppImages on NixOS
       firefox # Browser
+      yandex-browser-stable
       remmina # XRDP & VNC Client
       vscodium # IDE
       micro 
       alacritty
+      tdesktop
 
       # File Management
       gnome.file-roller # Archive Manager
