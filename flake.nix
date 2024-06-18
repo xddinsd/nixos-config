@@ -21,9 +21,6 @@
       nixos-hardware.url = "github:nixos/nixos-hardware/master"; # Hardware Specific Configurations
 
 
-      nixpkgs = {
-          config.permittedInsecurePackages = ["yandex-browser-stable"];
-      };
 
       # User Environment Manager
       home-manager = {
