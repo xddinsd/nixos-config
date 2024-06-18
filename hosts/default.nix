@@ -32,7 +32,7 @@ let
     };
   };
 
-  lib = nixpkgs.lib;
+  lib = pkgs.lib;
 in
 {
   # Desktop Profile
