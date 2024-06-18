@@ -16,7 +16,12 @@ let
 
   pkgs = import nixpkgs {
     inherit system;
-    config.allowUnfree = true;
+    config = {
+      allowUnfree = true;
+      permittedInsecurePackages = [
+          "yandex-browser-stable"
+      ];
+    };
   };
 
   stable = import nixpkgs-stable {
