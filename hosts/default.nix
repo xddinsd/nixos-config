@@ -20,7 +20,7 @@ let
     inherit system;
     config = {
       allowUnfree = true;
-      permittedInsecurePackages = ["yandex-browser-stable"];
+      # permittedInsecurePackages = ["yandex-browser-stable"];
     };
   };
 
@@ -28,11 +28,11 @@ let
     inherit system;
     config = {
       allowUnfree = true;
-      permittedInsecurePackages = ["yandex-browser-stable"];
+      # permittedInsecurePackages = ["yandex-browser-stable"];
     };
   };
 
-  lib = pkgs.lib;
+  lib = nixpkgs.lib;
 in
 {
   # Desktop Profile
