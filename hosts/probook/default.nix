@@ -61,16 +61,4 @@
       drivers = [ pkgs.cnijfilter2 ]; # Canon TS5300
     };
   };
-
-  flatpak = {
-    extraPackages = [
-      "com.github.tchx84.Flatseal"
-    ];
-  };
-
-  # Temporary Bluetooth Fix
-  systemd.tmpfiles.rules = [
-    "d /var/lib/bluetooth 700 root root - -"
-  ];
-  systemd.targets."bluetooth".after = [ "systemd-tmpfiles-setup.service" ];
 }
