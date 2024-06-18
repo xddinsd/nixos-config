@@ -20,7 +20,7 @@ let
     inherit system;
     config = {
       allowUnfree = true;
-      # permittedInsecurePackages = ["yandex-browser-stable"];
+      permittedInsecurePackages = ["yandex-browser-stable"];
     };
   };
 
@@ -28,7 +28,7 @@ let
     inherit system;
     config = {
       allowUnfree = true;
-      # permittedInsecurePackages = ["yandex-browser-stable"];
+      permittedInsecurePackages = ["yandex-browser-stable"];
     };
   };
 
