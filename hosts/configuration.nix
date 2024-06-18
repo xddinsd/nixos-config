@@ -125,7 +125,7 @@ in
       # Apps
       appimage-run # Runs AppImages on NixOS
       firefox # Browser
-      yandex-browser-stable
+      yandex-browser
       remmina # XRDP & VNC Client
       vscodium # IDE
       micro 
