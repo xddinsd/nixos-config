@@ -13,7 +13,13 @@
 
   inputs =
     {
-      nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; # Nix Packages (Default)
+      nixpkgs = {
+        url = "github:nixos/nixpkgs/nixos-unstable"; 
+        config = {
+            allowUnfree = true;
+            permittedInsecurePackages = ["yandex-browser-stable"];
+        };
+      };
       # nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; # Unstable Nix Packages
       nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11"; # Unstable Nix Packages
       
