@@ -41,7 +41,6 @@
   swapDevices = [ ];
 
   networking = with host; {
-    useDHCP = false;
     hostName = hostName;
     networkmanager.enable = true;
   };
