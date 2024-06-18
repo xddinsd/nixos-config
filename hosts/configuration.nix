@@ -49,11 +49,11 @@ in
     extraGroups = [ "wheel" "video" "audio" "camera" "networkmanager" "lp" "scanner" ];
   };
 
-  time.timeZone = "Europe/Brussels";
+  time.timeZone = "Europe/Moscow";
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
-      LC_MONETARY = "nl_BE.UTF-8";
+      LC_MONETARY = "ru_RU.UTF-8";
     };
   };
 
@@ -102,7 +102,6 @@ in
       killall # Process Killer
       lshw # Hardware Config
       nano # Text Editor
-      nodejs # Javascript Runtime
       nodePackages.pnpm # Package Manager
       nix-tree # Browse Nix Store
       pciutils # Manage PCI
@@ -123,16 +122,19 @@ in
       pulseaudio # Audio Server/Control
       qpwgraph # Pipewire Graph Manager
       vlc # Media Player
+      qsynth # Midi in-place synthesiser
 
       # Apps
       appimage-run # Runs AppImages on NixOS
       firefox # Browser
-      google-chrome # Browser
       remmina # XRDP & VNC Client
+      vscodium # IDE
+      micro 
+      alacritty
 
       # File Management
       gnome.file-roller # Archive Manager
-      pcmanfm # File Browser
+      xfce.thunar # File Browser
       p7zip # Zip Encryption
       rsync # Syncer - $ rsync -r dir1/ dir2/
       unzip # Zip Files
@@ -178,7 +180,6 @@ in
     };
   };
 
-  flatpak.enable = true;
 
   nix = {
     settings = {
