@@ -164,6 +164,7 @@ in
         hostName = "probook";
         mainMonitor = "eDP-1";
         secondMonitor = "";
+        thirdMonitor = "";
       };
     };
     modules = [
