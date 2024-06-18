@@ -44,29 +44,6 @@
     useDHCP = false;
     hostName = hostName;
     networkmanager.enable = true;
-    interfaces = {
-      enp0s25 = {
-        useDHCP = true;
-        # ipv4.addresses = [{
-        #   address = "192.168.0.51";
-        #   prefixLength = 24;
-        # }];
-      };
-      wlo1 = {
-        useDHCP = true;
-        # ipv4.addresses = [ {
-        #  address = "192.168.0.51";
-        #  prefixLength = 24;
-        # } ];
-      };
-    };
-    defaultGateway = "192.168.0.1";
-    nameservers = [ "192.168.0.4" ];
-    firewall = {
-      enable = false;
-      # allowedUDPPorts = [ 53 67 ];
-      # allowedTCPPorts = [ 53 80 443 9443 ];
-    };
   };
 
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
