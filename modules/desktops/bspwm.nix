@@ -89,7 +89,7 @@ in
           enable = true;
           xkb = {
             layout = "us,ru";
-            xkbOptions = "grp:win_space_toggle";
+            options = "grp:win_space_toggle";
           };
           autoRepeatInterval = 50;
           autoRepeatDelay = 200;
