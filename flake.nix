@@ -23,7 +23,7 @@
 
       nixpkgs = {
           config.permittedInsecurePackages = ["yandex-browser-stable"];
-      }
+      };
 
       # User Environment Manager
       home-manager = {
