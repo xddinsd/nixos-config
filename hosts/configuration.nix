@@ -104,7 +104,7 @@ in
       nix-tree # Browse Nix Store
       pciutils # Manage PCI
       smartmontools # Disk Health
-      gnome-disks
+      gnome.gnome-disk-utility
       tldr # Helper
       usbutils # Manage USB
       wget # Retriever
