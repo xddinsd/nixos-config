@@ -127,7 +127,7 @@ in
       appimage-run # Runs AppImages on NixOS
       firefox # Browser
       remmina # XRDP & VNC Client
-      vscodium # IDE
+      vscode # IDE
       micro 
       alacritty
       tdesktop
