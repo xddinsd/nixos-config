@@ -1,6 +1,8 @@
-#+title: Matthias' NixOS & Nix-Darwin System Configuration Flake
+#+title: Matthias' NixOS build configured for me
 #+description: General information about my flake and how to set it up
 #+author: Matthias Benaets
+
+## Chosen host to fork: probook, others unchanged
 
 #+attr_org: :width 600
 [[file:rsc/Header.svg]]
