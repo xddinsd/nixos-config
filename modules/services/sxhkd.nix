@@ -22,7 +22,7 @@
             "super + shift + n" = "thunar";
             "super + shift + p" = "pavucontrol";
             "super + shift + t" = "telegram-desktop";
-            "super + shift + c" = "codium";
+            "super + shift + c" = "code";
             "super + shift + m" = "qsynth";
             # Screenshot
             "Print" = "flameshot gui";
