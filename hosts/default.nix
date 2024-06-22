@@ -13,14 +13,11 @@
 
 let
   system = "x86_64-linux";
-  
-  # nixpkgs.config.permittedInsecurePackages = ["yandex-browser-stable"];
 
   pkgs = import nixpkgs {
     inherit system;
     config = {
       allowUnfree = true;
-      permittedInsecurePackages = ["yandex-browser-stable"];
     };
   };
 
@@ -28,7 +25,6 @@ let
     inherit system;
     config = {
       allowUnfree = true;
-      permittedInsecurePackages = ["yandex-browser-stable"];
     };
   };
 

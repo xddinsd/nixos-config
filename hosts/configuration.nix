@@ -91,6 +91,7 @@ in
       EDITOR = "${vars.editor}";
       VISUAL = "${vars.editor}";
     };
+    
     systemPackages = with pkgs; [
       # Terminal
       terminal # Terminal Emulator
@@ -125,7 +126,6 @@ in
       # Apps
       appimage-run # Runs AppImages on NixOS
       firefox # Browser
-      yandex-browser
       remmina # XRDP & VNC Client
       vscodium # IDE
       micro 
