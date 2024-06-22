@@ -28,7 +28,7 @@ in
             "bar/main" = {
               monitor = mainMonitor;
               width = "100%";
-              height = 26;
+              height = 35;
               background = "#00000000";
               foreground = "#ccffffff";
 

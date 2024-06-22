@@ -27,7 +27,7 @@
             # Screenshot
             "Print" = "flameshot gui";
             # Close/kill
-            "ctrl + shift + super + {c,k}" = "bspc node -{c,k}";
+            "ctrl + alt + super + {c,k}" = "bspc node -{c,k}";
 
             # # # # # Window Settings
             # Change window mode floating -> tiled
