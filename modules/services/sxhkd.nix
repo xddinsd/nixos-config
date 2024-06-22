@@ -39,8 +39,8 @@
             "super + {_,shift + }{1-9,0}" = "bspc {desktop -f,node -d} '^{1-9,10}'";
             # Move windows along the screen
             "super + {_,shift +}{Left,Right,Up,Down}" = "bspc node -{f,s} {west,east,north,south}";
-            # Control - Resize
-            "control + {Left,Down,Up,Right}" = ''
+            # Control + Super - Resize
+            "control + super + {Left,Down,Up,Right}" = ''
               bspc node -z {left -20 0 || bspc node -z right -20 0, \
                             bottom 0 20 || bspc node -z top 0 20,\
                             top 0 -20 || bspc node -z bottom 0 -20,\
