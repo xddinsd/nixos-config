@@ -46,6 +46,7 @@
 
   laptop.enable = true;
   bspwm.enable = true;
+  networking.networkmanager.enable = true;
 
   environment = {
     systemPackages = with pkgs; [
