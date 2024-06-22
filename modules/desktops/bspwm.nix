@@ -23,17 +23,21 @@ let
 
     WORKSPACES
 
-    bspc config border_width      3
-    bspc config window_gaps      12
+    bspc config border_width      5
+    bspc config window_gaps      17
     bspc config split_ratio     0.5
-
+s
     bspc config click_to_focus            true
     bspc config focus_follows_pointer     false
     bspc config borderless_monocle        false
     bspc config gapless_monocle           false
+    
+    bspc config focused_border_color "#7899FA"
+    bspc config normal_border_color "#1f222b"
+    bspc config active_border_color "#bd93f9"
+    bspc config presel_feedback_color "#6272a4"
 
-    #bspc config normal_border_color  "#000000"
-    #bspc config focused_border_color "#ffffff"
+    bspc config border_width 5
 
     #pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -53,7 +57,7 @@ let
         polybar thi &
       ''
       else if hostName == "vm" || hostName == "probook" then ''
-        bspc monitor -d 1 2 3 4 5
+        bspc monitor -d 1 2 3 4 5 6 7
       ''
       else "")
     ]
@@ -199,7 +203,7 @@ in
                   sticky = true;
                 };
                 "Steam" = {
-                  desktop = "5";
+                  desktop = "7";
                 };
               };
               extraConfig = extraConf;
