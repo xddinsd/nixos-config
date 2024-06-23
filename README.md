@@ -71,16 +71,15 @@ cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/<username>/hosts/pro
   nixos-install --flake .#probook
 ```
 
-** Finalization
+### Finalization
 1. Set a root password after installation is done
 2. Reboot without liveCD
 3. Login
-   1. If initialPassword is not set use TTY:
-      - __Ctrl - Alt - F1__
-      - login as root
-      - ```passwd <username>```
-      - __Ctrl - Alt - F7__
-      - login as user
+    - __Ctrl - Alt - F1__
+    - login as root
+    - ```passwd <username>```
+    - __Ctrl - Alt - F7__
+    - login as user
 4. Remove extra configs to avoid problems rebuilding
 ```bash
 sudo rm /etc/nixos/configuration.nix
