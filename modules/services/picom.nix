@@ -59,7 +59,7 @@
           # animation-clamping = false;
           # fade-out-step = 1;
 
-          Animations Jonaburg
+          # Animations Jonaburg
           transition-length = 150;
           transition-pow-x = 0.5;
           transition-pow-y = 0.5;
