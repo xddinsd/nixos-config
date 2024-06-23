@@ -29,7 +29,7 @@ in
               monitor = mainMonitor;
               width = "100%";
               height = 35;
-              background = "#00000000";
+              background = "#1e222a";
               foreground = "#ccffffff";
 
               offset-y = 2;
@@ -42,7 +42,8 @@ in
               font-3 = "FontAwesome6Brands:style=Regular:size=8";
               font-4 = "FiraCodeNerdFont:size=10";
               modules-left = "logo bspwm";
-              modules-right = "backlight pad memory cpu pad sink volume pad battery date";
+              modules-center = "memory pad cpu pad backlight";
+              modules-right = "volume pad battery date";
 
               tray-position = "right";
               tray-detached = "false";
@@ -96,14 +97,14 @@ in
             "module/memory" = {
               type = "internal/memory";
               format = "<label>";
-              format-foreground = "#999";
+              format-foreground = "#d19a66";
               label = "  %percentage_used%%";
             };
             "module/cpu" = {
               type = "internal/cpu";
               interval = 1;
               format = "<label>";
-              format-foreground = "#999";
+              format-foreground = "#9498f0";
               label = "  %percentage%%";
             };
             "module/volume" = {
@@ -111,8 +112,8 @@ in
               interval = 2;
               use-ui-max = "false";
               format-volume = "<ramp-volume>  <label-volume>";
+              format-foreground = "#d35f5e";
               label-muted = "  muted";
-              label-muted-foreground = "#66";
 
               ramp-volume-0 = "";
               ramp-volume-1 = "";
@@ -132,10 +133,10 @@ in
               bar-width = 10;
               bar-indicator = "|";
               bar-indicator-font = 3;
-              bar-indicator-foreground = "#ff";
+              bar-indicator-foreground = "#61afef";
               bar-fill = "─";
               bar-fill-font = 3;
-              bar-fill-foreground = "#ff";
+              bar-fill-foreground = "#61afef";
               bar-empty = "─";
               bar-empty-font = 3;
               bar-empty-foreground = "#44";
@@ -153,9 +154,9 @@ in
               format-full = "<ramp-capacity> <label-full>    ";
 
               ramp-capacity-0 = "";
-              ramp-capacity-0-foreground = "#f53c3c";
+              ramp-capacity-0-foreground = "#a0e8a2";
               ramp-capacity-1 = "";
-              ramp-capacity-1-foreground = "#ffa900";
+              ramp-capacity-1-foreground = "#a0e8a2";
               ramp-capacity-2 = "";
               ramp-capacity-3 = "";
               ramp-capacity-4 = "";
@@ -163,7 +164,7 @@ in
               bar-capacity-width = 10;
               bar-capacity-format = "%{+u}%{+o}%fill%%empty%%{-u}%{-o}";
               bar-capacity-fill = "█";
-              bar-capacity-fill-foreground = "#ddffffff";
+              bar-capacity-fill-foreground = "#a0e8a2";
               bar-capacity-fill-font = 3;
               bar-capacity-empty = "█";
               bar-capacity-empty-font = 3;
@@ -178,81 +179,49 @@ in
             };
             "module/date" = {
               type = "internal/date";
-              date = "  %%{F#999}%d-%m-%Y%%{F-} %%{F#fff}%H:%M%%{F-}";
+              date = "  %%{F#fff}%d-%m-%Y%%{F-} %%{F#f2d17f}%H:%M%%{F-}";
             };
             "module/bspwm" = {
               type = "internal/bspwm";
-              pin-workspace = true;
-
-              # ws-icon-0 = "1;";
-              # ws-icon-1 = "2;";
-              # ws-icon-2 = "3;";
-              # ws-icon-3 = "4;";
-              # ws-icon-4 = "5;";
-              # ws-icon-5 = "6;";
-              # ws-icon-6 = "7;";
-              # ws-icon-7 = "8;";
-              # ws-icon-8 = "9;";
-              # ws-icon-9 = "10;";
-              ws-icon-0 = "1;1";
-              ws-icon-1 = "2;2";
-              ws-icon-2 = "3;3";
-              ws-icon-3 = "4;4";
-              ws-icon-4 = "5;5";
-              ws-icon-5 = "6;6";
-              ws-icon-6 = "7;7";
-              ws-icon-7 = "8;8";
-              ws-icon-8 = "9;9";
-              ws-icon-9 = "0;0";
-
-              format = "<label-state> <label-mode>";
-
-              label-dimmed-underline = "#ccffffff";
-
-              label-focused = "%icon%";
-              label-focused-foreground = "#fff";
-              label-focused-background = "#773f3f3f";
-              label-focused-underline = "#c9665e";
-              label-focused-font = 4;
-              label-focused-padding = 2;
-
+              
+              pin-workspaces = true;
+              inline-mode = true;
+              enable-click = true;
+              enable-scroll = true;
+              reverse-scroll = false;
+              
+              format = "<label-state>";
+              ws-icon-0 = "1;%{F#F9DE8F}1";
+              ws-icon-1 = "2;%{F#ff9b93}2";
+              ws-icon-2 = "3;%{F#95e1d3}3";
+              ws-icon-3 = "4;%{F#81A1C1}4";
+              ws-icon-4 = "5;%{F#A3BE8C}5";
+              ws-icon-5 = "6;%{F#F9DE8F}6";
+              ws-icon-6 = "7;%{F#ff9b93}7";
+              
+              label-separator = "";
+              label-separator-background = "#2b2f37";
+              
+              label-focused =  "%icon%";
+              label-focused-foreground = "#ccffffff";
+              label-focused-underline =  "#565c64";
+              label-focused-padding = 1;
+              label-focused-background = "#2b2f37";
+              
               label-occupied = "%icon%";
-              label-occupied-foreground = "#ddd";
-              label-occupied-underline = "#666";
-              label-occupied-font = 4;
-              label-occupied-padding = 2;
-
-              label-urgent = "%icon%";
-              label-urgent-foreground = "#000000";
-              label-urgent-background = "#bd2c40";
-              label-urgent-underline = "#9b0a20";
-              label-urgent-font = 4;
-              label-urgent-padding = 2;
-
+              label-occupied-foreground = "#646870";
+              label-occupied-background = "#2b2f37";
+              label-occupied-padding = 1;
+              
               label-empty = "%icon%";
-              label-empty-foreground = "#55";
-              label-empty-font = 4;
-              label-empty-padding = 2;
-
-              label-monocle = "M";
-              label-monocle-underline = "#c9665e";
-              label-monocle-background = "#33ffffff";
-              label-monocle-padding = 2;
-
-              label-locked = "L";
-              label-locked-foreground = "#bd2c40";
-              label-locked-underline = "#c9665e";
-              label-locked-padding = 2;
-
-              label-sticky = "S";
-              label-sticky-foreground = "#fba922";
-              label-sticky-underline = "#c9665e";
-              label-sticky-padding = 2;
-
-              label-private = "P";
-              label-private-foreground = "#bd2c40";
-              label-private-underline = "#c9665e";
-              label-private-padding = 2;
+              label-empty-foreground =  "#ccffffff";
+              label-empty-padding = 1;
+              label-empty-background = "#2b2f37";
+              
+              label-urgent = "%icon%";
+              label-urgent-foreground = "#88C0D0";
+              label-urgent-background = "#2b2f37";
+              label-urgent-padding = 1;
             };
             "module/title" = {
               type = "internal/xwindow";
