@@ -3,8 +3,16 @@
 
 ## Chosen host to fork: probook, others unchanged
 
+#### To Do list:
+- DONE:     Minimal config 
+- DONE:     All programs I need
+- DONE:     Hotkeys
+- DONE:     Documentation 
+- WIP:      Theming (Polybar and rofi look awful, had not enough time to fix it yet)
+- IN QUEUE: Remove legacy files from Matthias' build
 
-* System Components     
+
+## System Components     
 
 |                 | *NixOS - Xorg*   |
 |-----------------|------------------|
@@ -19,19 +27,20 @@
 | *Terminal*      | Alacritty        |
 
 
-
 # NixOS Installation Guide
 #### Disk partitioning (only UEFI)
 *Create a partition layout using disko*
 - Get a liveCD of nix with gnome and open this page
-- Copy what's in disko.nix file to your home folder, with 'nano' for ex.
-- change disk name in disko.nix (you could use 'lsblk' command)
+- Copy what's in disko.nix file to your home folder, with ```nano``` for ex.
+- change disk name in disko.nix (you could use ```lsblk```)
 
 ```console
 
 sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko ./disko.nix
 
 ```
+For legacy boot check the Disko page on github, there are a lot of examples💯
+
 
 ### Generate
 *In these commands*
@@ -41,8 +50,12 @@ sudo nix --experimental-features "nix-command flakes" run github:nix-community/d
   sudo -i
   nixos-generate-config --root /mnt
   nix-env -iA nixos.git
+```
+```bash
   git clone https://github.com/xddinsd/nixos-config /mnt/etc/nixos/<username>
-  cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/<username>/hosts/probook/
+```
+```bash
+cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/<username>/hosts/probook/
 ```
 
 - Configure manually your username in flake.nix
@@ -50,8 +63,7 @@ sudo nix --experimental-features "nix-command flakes" run github:nix-community/d
  
 ### Install
 *In these commands*
-- Move into cloned repository
-  - in this example __/mnt/etc/nixos/<username>__
+- Move into cloned repository (__/mnt/etc/nixos/<username>__)
 - Install nixos
 
 ```bash
@@ -64,12 +76,12 @@ sudo nix --experimental-features "nix-command flakes" run github:nix-community/d
 2. Reboot without liveCD
 3. Login
    1. If initialPassword is not set use TTY:
-      - ~Ctrl - Alt - F1~
+      - __Ctrl - Alt - F1__
       - login as root
-      - ~# passwd <username>~
-      - ~Ctrl - Alt - F7~
+      - ```passwd <username>```
+      - __Ctrl - Alt - F7__
       - login as user
-4. Remove extra configs
+4. Remove extra configs to avoid problems rebuilding
 ```bash
 sudo rm /etc/nixos/configuration.nix
 sudo rm /etc/nixos/hardware_configuration.nix
@@ -79,3 +91,8 @@ sudo rm /etc/nixos/hardware_configuration.nix
 ```bash
 sudo nixos-rebuild switch --flake <config path>#probook
 ```
+
+6. Check out:
+- ./modules/services/sxkhd for hotkeys
+- ./hosts/configuration.nix to change programs list
+- ./modules/desktops/polybar to configure polybar on multiple screens as you need it 
