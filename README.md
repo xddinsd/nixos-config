@@ -4,7 +4,7 @@
 ## Chosen host to fork: probook, others unchanged
 
 #### To Do list:
-- DONE:     Minimal config 
+- DONE:     Minimal setup
 - DONE:     All programs I need
 - DONE:     Hotkeys
 - DONE:     Documentation 
