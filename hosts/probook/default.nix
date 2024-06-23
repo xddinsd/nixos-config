@@ -23,19 +23,16 @@
   ];
 
   boot = {
+    consoleLogLevel = 3;
     loader = {
-      efi = {
-        canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot";
-      };
-      grub = {
+      systemd-boot = {
         enable = true;
-        devices = [ "nodev" ];
-        efiSupport = true;
-        useOSProber = true;
         configurationLimit = 2;
       };
-      timeout = 1;
+      efi = {
+        canTouchEfiVariables = true;
+      };
+      timeout = 5;
     };
   };
 
