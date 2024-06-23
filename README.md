@@ -1,4 +1,4 @@
-# Matthias' NixOS build configured for me
+# Matthias' BSPWM NixOS build reconfigured
 
 
 ## Chosen host to fork: probook, others unchanged
@@ -45,7 +45,8 @@ sudo nix --experimental-features "nix-command flakes" run github:nix-community/d
   cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/<username>/hosts/probook/
 ```
 
-- Configure your username in flake.nix
+- Configure manually your username in flake.nix
+- Add comma for './games.nix' in __/modules/programs/default.nix__ if no steam needed
  
 ### Install
 *In these commands*
