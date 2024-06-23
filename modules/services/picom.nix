@@ -25,9 +25,9 @@
         backend = "glx";
         vSync = true;
 
-        # activeOpacity = 0.93; # Transparency
-        # inactiveOpacity = 0.93;
-        # menuOpacity = 0.93;
+        activeOpacity = 0.93; # Transparency
+        inactiveOpacity = 0.93;
+        menuOpacity = 0.93;
 
         shadow = false; # Shadows
         shadowOpacity = 0.75;
@@ -59,13 +59,13 @@
           # animation-clamping = false;
           # fade-out-step = 1;
 
-          # Animations Jonaburg
-          # transition-length = 150;
-          # transition-pow-x = 0.5;
-          # transition-pow-y = 0.5;
-          # transition-pow-w = 0.5;
-          # transition-pow-h = 0.5;
-          # size-transition = true;
+          Animations Jonaburg
+          transition-length = 150;
+          transition-pow-x = 0.5;
+          transition-pow-y = 0.5;
+          transition-pow-w = 0.5;
+          transition-pow-h = 0.5;
+          size-transition = true;
 
           detect-rounded-corners = true;
           detect-client-opacity = false;

@@ -32,11 +32,17 @@ in
               background = "#1e222a";
               foreground = "#ccffffff";
 
-              offset-y = "0.5%";
-              offset-x = "1%";
               padding-right = 0;
               padding-left = 1;
-
+			  bottom = false;
+			  
+			  border-top-size = 7;
+			  border-bottom-size = 7;
+			  border-top-color ="#1e222a";
+			  border-bottom-color = "#1e222a";
+			  fixed-center = true;
+			  line-size = 3;
+			  
               module-margin-left = 1;
 
               font-0 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=13;3";
@@ -212,7 +218,7 @@ in
 
             "module/date" = {
               type = "internal/date";
-              date = "  %%{F#fff}%d-%m-%Y%%{F-} %%{F#f2d17f}%H:%M%%{F-}";
+              date = "%%{F#fff}%d-%m-%Y%%{F-} %%{F#f2d17f}%H:%M%%{F-}";
             };
             "module/bspwm" = {
               type = "internal/bspwm";
