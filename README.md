@@ -24,7 +24,7 @@
 #### Disk partitioning (only UEFI)
 *Create a partition layout using disko*
 - Get a liveCD of nix with gnome and open this page
-- Copy what's in disko.nix file to your home folder, for ex. by using nano.
+- Copy what's in disko.nix file to your home folder, with 'nano' for ex.
 - change disk name in disko.nix (you could use 'lsblk' command)
 
 ```console
