@@ -27,26 +27,31 @@ in
           config = {
             "bar/main" = {
               monitor = mainMonitor;
-              width = "100%";
-              height = 35;
+              width = "98%";
+              height = 26;
               background = "#1e222a";
               foreground = "#ccffffff";
 
-              offset-y = 2;
-              padding-right = 2;
+              offset-y = "0.5%";
+              offset-x = "1%";
+              padding-right = 0;
+              padding-left = 1;
+
               module-margin-left = 1;
 
-              font-0 = "SourceCodePro:size=10";
-              font-1 = "FontAwesome6Free:style=Solid:size=8";
-              font-2 = "FontAwesome6Free:style=Regular:size=8";
-              font-3 = "FontAwesome6Brands:style=Regular:size=8";
-              font-4 = "FiraCodeNerdFont:size=10";
+              font-0 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=13;3";
+              font-1 = "JetBrainsMono Nerd Font:size=18;5";
+              font-2 = "FontAwesome6Free:style=Regular:size=13";
+              font-3 = "FontAwesome6Brands:style=Regular:size=13";
+              font-4 = "FiraCodeNerdFont:size=15";
+
               modules-left = "logo bspwm";
-              modules-center = "memory pad cpu pad backlight";
-              modules-right = "volume pad battery date";
+              modules-center = "memory pad cpu pad temperature";
+              modules-right = "battery pad volume pad  backlight date";
 
               tray-position = "right";
               tray-detached = "false";
+              tray-padding = 5;
 
               wm-restack = "bspwm";
             };
@@ -79,9 +84,18 @@ in
               background = "#00000000";
               foreground = "#ccffffff";
 
-              offset-y = 2;
-              spacing = "1.5";
-              padding-right = 2;
+              tray-position = "right";
+              tray-padding = 5;
+
+              border-top-size = 7;
+              border-bottom-size = 7;
+              border-top-color = "#00000000";
+              border-bottom-color = "#00000000";
+
+              offset-x = "1%";
+              offset-y = "0.5%";
+              padding-left = 1;
+              padding-right = 0;
               module-margin-left = 1;
 
               font-0 = "SourceCodePro:size=10";
@@ -143,7 +157,12 @@ in
             };
             "module/battery" = {
               type = "internal/battery";
-              full-at = 98;
+              full-at = 95;
+              low-at = 10;
+
+              battery = "BAT1";
+              adapter = "ACAD";
+              poll-interval = 5;
 
               label-full = "%percentage%%";
               label-charging = "%percentage%%";
@@ -177,6 +196,20 @@ in
               animation-charging-4 = "";
               animation-charging-framerate = 750;
             };
+            "module/temperature" = {
+              type = "internal/temperature";
+              thermal-zone = 0;
+              warn-temperature = 70;
+
+              format = "<ramp> <label>";
+              format-warn = "<ramp> <label-warn>";
+              format-padding = 0; 
+              label = "%temperature%";
+              label-warn = "%temperature%";
+              ramp-0 = "";
+              ramp-foreground = "#a4ebf3";
+            };
+
             "module/date" = {
               type = "internal/date";
               date = "  %%{F#fff}%d-%m-%Y%%{F-} %%{F#f2d17f}%H:%M%%{F-}";
