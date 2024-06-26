@@ -8,7 +8,7 @@
 - DONE:     All programs I need
 - DONE:     Hotkeys
 - DONE:     Documentation 
-- WIP:      Theming (Polybar and rofi look awful, had not enough time to fix it yet)
+- WIP:      Theming (**Picom don't want my corners rounded so I gave up to the whole config**)
 - IN QUEUE: Remove legacy files from Matthias' build
 
 
