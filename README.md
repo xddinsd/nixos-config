@@ -8,7 +8,7 @@
 - DONE:     All programs I need
 - DONE:     Hotkeys
 - DONE:     Documentation 
-- WIP:      Theming (**Picom don't want my corners rounded so I gave up to the whole config**)
+- WIP:      Theming (**Picom don't want my corners rounded so I gave up to the entire config**)
 - IN QUEUE: Remove legacy files from Matthias' build
 
 
